@@ -48,9 +48,9 @@ Developer Push → GitHub Actions CI → DockerHub → ArgoCD → EKS Cluster
 | Resource | Details |
 |---|---|
 | **VPC** | `10.0.0.0/16` across 3 AZs with public, private, and intra subnets |
-| **NAT Gateway** | Single NAT for private subnet internet access |
+| **NAT Gateway** | 3 NAT Gateways for private subnet internet access |
 | **EKS Cluster** | `bankapp-eks` running Kubernetes **1.35** |
-| **Node Group** | `bankapp-ng` — 3x `t3.medium` instances on AL2023 |
+| **Node Group** | `bankapp-ng` — 3x `t3.small` instances on AL2023 |
 | **Add-ons** | CoreDNS, kube-proxy, VPC-CNI, Pod Identity Agent, EBS CSI Driver |
 | **ArgoCD** | Installed via Helm, exposed as LoadBalancer |
 
