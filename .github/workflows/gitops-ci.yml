@@ -64,7 +64,7 @@ jobs:
 
       - name: Update Kubernetes deployment manifest
         run: |
-          sed -i "s|image: ${{ env.DOCKERHUB_REPO }}:.*|image: ${{ env.DOCKERHUB_REPO }}:${{ steps.tag.outputs.sha_short }}|" k8s/bankapp-deployment.yml
+          sed -i "s|image: trainwithshubham/ai-bankapp-eks:.*|image: ${{ env.DOCKERHUB_REPO }}:${{ steps.tag.outputs.sha_short }}|" k8s/bankapp-deployment.yml
 
       - name: Commit updated manifest
         run: |
