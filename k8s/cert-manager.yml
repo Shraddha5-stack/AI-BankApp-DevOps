@@ -20,3 +20,17 @@ spec:
                 kind: Gateway
                 name: bankapp-gateway
                 namespace: bankapp
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: bankapp-tls
+  namespace: bankapp
+spec:
+  secretName: bankapp-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - 54.200.19.53.nip.io
