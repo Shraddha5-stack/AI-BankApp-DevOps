@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-envoy-demo
+  namespace: argocd
+data:
+  managed-by: app-of-apps
+  component: envoy
