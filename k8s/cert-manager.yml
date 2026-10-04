@@ -33,4 +33,4 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-    - 54.200.19.53.nip.io
+    - 54.201.132.123.nip.io
